@@ -2,18 +2,61 @@ try:
 	from PyQt5.QtWidgets import *
 except ImportError:
 	from PyQt4.QtGui import *
+	from PyQt4.QtGui import QFileDialog as OldFileDialog
 
-	class QFileDialog(QtWidgets.QFileDialog):
-		def getOpenFileName(self):
-			super(QFileDialog, self).getOpenFileNameAndFilter()
-			print('Called getOpenFileNameAndFilter()')
 
-		def getOpenFileNames(self):
-			super(QFileDialog, self).getOpenFileNamesAndFilter()
-			print('Called getOpenFileNamesAndFilter()')
+	class QFileDialog(OldFileDialog):
+		@staticmethod
+		def getOpenFileName(
+				parent=None, 
+				caption='', 
+				directory='', 
+				filter='', 
+				selectedFilter=None,
+				options=QFileDialog.Options()
+			):
+			return OldFileDialog.getOpenFileNameAndFilter(
+				parent, 
+				caption, 
+				directory, 
+				filter, 
+				selectedFilter,
+				options
+			)
 
-		def getSaveFileName(self):
-			super(QFileDialog, self).getSaveFileNameAndFilter()
-			print('Called getSaveFileNameAndFilter()')
+		@staticmethod
+		def getOpenFileNames(
+				parent=None, 
+				caption='', 
+				directory='', 
+				filter='', 
+				selectedFilter=None,
+				options=QFileDialog.Options()
+			):
+			return OldFileDialog.getOpenFileNamesAndFilter(
+				parent, 
+				caption, 
+				directory, 
+				filter, 
+				selectedFilter,
+				options
+			)
+			
 
-print('Imported QtWidgets')
+		@staticmethod
+		def getSaveFileName(
+				parent=None, 
+				caption='', 
+				directory='', 
+				filter='', 
+				selectedFilter=None,
+				options=QFileDialog.Options()
+			):
+			return OldFileDialog.getSaveFileNameAndFilter(
+				parent, 
+				caption, 
+				directory, 
+				filter, 
+				selectedFilter,
+				options
+			)
