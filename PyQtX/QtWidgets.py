@@ -13,7 +13,7 @@ except ImportError:
 				directory='', 
 				filter='', 
 				selectedFilter=None,
-				options=QFileDialog.Options()
+				options=None
 			):
 			return OldFileDialog.getOpenFileNameAndFilter(
 				parent, 
@@ -31,7 +31,7 @@ except ImportError:
 				directory='', 
 				filter='', 
 				selectedFilter=None,
-				options=QFileDialog.Options()
+				options=None
 			):
 			return OldFileDialog.getOpenFileNamesAndFilter(
 				parent, 
@@ -50,7 +50,7 @@ except ImportError:
 				directory='', 
 				filter='', 
 				selectedFilter=None,
-				options=QFileDialog.Options()
+				options=None
 			):
 			return OldFileDialog.getSaveFileNameAndFilter(
 				parent, 
