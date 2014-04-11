@@ -1,7 +1,7 @@
 try:
-	from PyQt5 import QtWidgets
+	from PyQt5.QtWidgets import *
 except ImportError:
-	from PyQt4 import QtGui as QtWidgets
+	from PyQt4.QtGui import *
 
 	class QFileDialog(QtWidgets.QFileDialog):
 		def getOpenFileName(self):
@@ -17,4 +17,3 @@ except ImportError:
 			print('Called getSaveFileNameAndFilter()')
 
 print('Imported QtWidgets')
-print(QtWidgets.QFileDialog)

@@ -1,6 +1,6 @@
 try:
-	from PyQt5 import QtWebKitWidgets
-except:
-	from PyQt4 import QtWebKit as QtWebKitWidgets
+	from PyQt5.QtWebKitWidgets import *
+except ImportError:
+	from PyQt4.QtWebKit import *
 
 print('Imported QtWebKitWidgets')

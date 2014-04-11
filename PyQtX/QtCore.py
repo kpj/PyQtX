@@ -1,6 +1,6 @@
 try:
-	from PyQt5 import QtCore
+	from PyQt5.QtCore import *
 except ImportError:
-	from PyQt4 import QtCore
+	from PyQt4.QtCore import *
 
 print('Imported QtCore')
