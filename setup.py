@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
 	name='PyQtX',
-	version='0.1.1',
+	version='0.1.2',
 	author='kpj',
 	author_email='kpjkpjkpjkpjkpjkpj@gmail.com',
 	packages=['PyQtX'],
